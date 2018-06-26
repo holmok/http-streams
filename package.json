@@ -1,0 +1,35 @@
+{
+  "name": "http-stream",
+  "version": "1.0.0",
+  "description": "http stream experiement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no tests\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holmok/http-stream.git"
+  },
+  "keywords": [
+    "http",
+    "stream",
+    "experiement"
+  ],
+  "author": "christopher holmok <christopher@holmok.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/holmok/http-stream/issues"
+  },
+  "homepage": "https://github.com/holmok/http-stream#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "hapi": "^17.5.2",
+    "pino": "^4.17.3"
+  }
+}
