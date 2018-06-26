@@ -1,8 +1,5 @@
 import Hapi from 'hapi';
-import Pino from 'pino';
-import { debug } from 'util';
-
-const logger = Pino();
+import PinoLogger from 'hapi-pino';
 
 const server = Hapi.server({
   host: 'localhost',
@@ -56,12 +53,17 @@ server.route({
 });
 
 (async function start() {
+  await server.register({
+    plugin: PinoLogger,
+    options: {
+      prettyPrint: process.env.NODE_ENV !== 'production',
+    },
+  });
+
   try {
     await server.start();
   } catch (err) {
-    logger.error(err);
+    server.logger().error(err);
     process.exit(1);
   }
-
-  logger.info('Server Start', server.info.uri, server.info.port);
 }());

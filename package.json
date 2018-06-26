@@ -30,6 +30,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "hapi": "^17.5.2",
+    "hapi-pino": "^4.0.4",
     "pino": "^4.17.3"
   }
 }
